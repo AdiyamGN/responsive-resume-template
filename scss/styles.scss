@@ -1,0 +1,9 @@
+@import "variables";
+@import "header";
+@import "home";
+
+body {
+	color: $accent;
+	background-color: $background;
+	font-family: 'Nunito', sans-serif;
+}
