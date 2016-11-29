@@ -1,0 +1,27 @@
+.about {
+	background: url(../images/about-face.jpg);
+	background-position: center bottom;
+	background-size: cover;
+	h2 {
+		color: $lead_header;
+		font-size: 60px;
+		font-weight: 400;
+		line-height: 1;
+		margin-left: -108px;
+		margin-top: 0;
+	}
+	.home-lead {
+		padding-bottom: 180px;
+	}
+}
+
+
+@media(max-width: 640px) {
+	.about {
+		h2, .home-lead {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 300px;
+		}
+	}
+}

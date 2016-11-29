@@ -1,9 +1,16 @@
 @import "variables";
 @import "header";
 @import "home";
+@import "about";
 
 body {
-	color: black;
+	color: #333333;
 	background-color: $background;
 	font-family: 'Nunito', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	font-size: 14px;
+	line-height: 1.6;
 }
+
+
