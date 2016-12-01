@@ -1,0 +1,82 @@
+.mentoring {
+	padding: 50px 0;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/cover.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	overflow: hidden;
+
+	.flex {
+		display: flex;
+		flex-direction: rows;
+		.col-1 {
+			max-width: 300px;
+			margin: 0 10px;
+		}
+
+		.order-first {
+			order: -1;
+		}
+
+		@media (max-width: 640px) {
+			display: block;
+			.col-1 {
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.flex-space-around {
+		justify-content: space-around;
+	}
+
+	.home-cta {
+		color: $mentoring_btn;
+	}
+
+	.home-lead {
+		margin-top: 250px;
+	}
+
+	.faces {
+		list-style: none;
+		margin: -50px 0px;
+		height: calc(100% + 100px);
+		padding: 0;
+		.face {
+			height: 80px;
+			width: 80px;
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			margin-bottom: 35px;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+			border-radius: 50%;
+			.bubble {
+				opacity: 0;
+				position: absolute;
+				left: 100%;
+				margin-left: 10px;
+				bottom: 50%;
+				width: 300px;
+				background: rgba(0, 0, 0, 0.8);
+				padding: 20px;
+				border-radius: 50px 50px 50px 5px;
+				border: 3px solid $white;
+				pointer-events: none;
+				transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+				transform: scale(0);
+				transform-origin: bottom left;
+			}
+		}
+
+		.face:hover {
+			.bubble {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+}
