@@ -2,6 +2,7 @@
 @import "header";
 @import "home";
 @import "about";
+@import "youtube";
 
 body {
 	color: #333333;
@@ -11,6 +12,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 	font-size: 14px;
 	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
 }
 
 

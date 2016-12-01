@@ -1,0 +1,88 @@
+.youtube {
+	padding: 50px 0;
+	background: url(../images/youtube-bg.gif);
+	background-size: cover;
+	background-position: center;
+	color: $white;
+
+	.flex {
+		display: flex;
+		flex-direction: rows;
+		.col-1 {
+			max-width: 300px;
+			margin: 0 10px;
+		}
+
+		.col-video {
+			min-width: 300px;
+			height: 400px;
+			margin: 0 10px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.video-strip {
+				background: url(../images/video-strip.png);
+				background-position: center 0px;
+				background-repeat: repeat-y;
+				background-size: 70%;
+				width: 100%;
+				height: calc(100% + 100px);
+				margin: -50px 0;
+				position: absolute;
+				top: 0;
+
+				.flex-video {
+					height: 0;
+					overflow: hidden;
+					margin-top: 50%;
+					padding-bottom: 60%;
+					position: relative;
+					vertical-align: middle;
+					box-shadow: 0px 4px 40px 3px rgba(0,0,0,0.5);
+					transform: scale(1.4);
+
+					@media (max-width: 985px) {
+						transform: scale(1);
+					}
+				}
+				.flex-video iframe,
+				.flex-video object,
+				.flex-video embed,
+				.flex-video video {
+					height: 100%;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+		.order-first {
+			order: -1;
+		}
+
+
+		@media (max-width: 640px) {
+			display: block;
+			.col-1 {
+				width: 100%;
+				margin: 0 auto;
+			}
+			.col-video {
+				width: 100%;
+				margin: 0 auto;
+				margin-bottom: 150px;
+			}
+		}
+	}
+
+	.flex-space-around {
+		justify-content: space-around;
+	}
+
+	.home-cta {
+		color: $youtube;
+	}
+
+}

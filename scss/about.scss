@@ -1,7 +1,35 @@
 .about {
+	padding: 50px 0;
 	background: url(../images/about-face.jpg);
 	background-position: center bottom;
 	background-size: cover;
+	
+	.flex {
+		display: flex;
+		flex-direction: rows;
+		.col-1 {
+			max-width: 300px;
+			margin: 0 10px;
+		}
+		.push-right {
+			margin-left: 330px;
+		}
+		@media (max-width: 640px) {
+			display: block;
+			.col-1 {
+				width: 100%;
+				margin: 0 auto;
+			}
+			.push-right {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.flex-center {
+		justify-content: center;
+	}
+
 	h2 {
 		color: $lead_header;
 		font-size: 60px;
